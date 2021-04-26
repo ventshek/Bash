@@ -1,5 +1,4 @@
 #!/usr/bin/expect
 set timeout 10
-spawn "cd /var/www/pterodactyl"
-spawn "sudo php artisan p:environment:setup"
+spawn sudo php /var/www/pterodactyl/artisan p:environment:setup
 interact
