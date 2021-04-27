@@ -3,24 +3,24 @@ set internalip [lindex $argv 0]
 set timeout 10
 spawn sudo php /var/www/pterodactyl/artisan p:environment:setup
 expect ">"
-send "fuck@off.com\r";
+send "example@example.com\r";
 expect ">"
 send "http://$internalip";
 expect ">"
-
+send "UTC\r";
 expect ">"
-
+send "redis\r";
 expect ">"
-
+send "redis\r";
 expect ">"
-
+send "redis\r";
 expect ">"
-
+send "yes\r";
 expect ">"
-
+send "\r";
 expect ">"
-
+send "Defaultpassword\r";
 expect ">"
-
+send "\r";
 
 interact
