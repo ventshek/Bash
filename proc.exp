@@ -2,5 +2,24 @@
 set timeout 10
 spawn sudo php /var/www/pterodactyl/artisan p:environment:setup
 expect ">"
-send "fuck@off.com/r";
+send "fuck@off.com\r";
+expect ">"
+send "http://"+intip;
+expect ">"
+
+expect ">"
+
+expect ">"
+
+expect ">"
+
+expect ">"
+
+expect ">"
+
+expect ">"
+
+expect ">"
+
+
 interact
