@@ -3,7 +3,7 @@ set timeout 5
 spawn sudo mysql -u root -p
 expect "Enter password: "
 send "Defaultpassword\r";
-expect "MariaDB [(none)]> "
+expect ">"
 send "USE mysql;\r";
 expect "MariaDB [mysql]> "
 send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword';\r";
