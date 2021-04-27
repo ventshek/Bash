@@ -8,8 +8,6 @@ send "\r";
 expect ">"
 send "\r";
 expect ">"
-send "\r";
+send "pterodactyl\r";
 expect ">"
 send "Defaultpassword\r";
-
-interact
