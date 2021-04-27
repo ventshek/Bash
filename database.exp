@@ -10,4 +10,4 @@ send "\r";
 expect ">"
 send "pterodactyl\r";
 expect ">"
-send "Defaultpassword\r";
+send "Defaultpassword1\r";
