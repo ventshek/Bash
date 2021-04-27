@@ -1,11 +1,11 @@
 #!/usr/bin/expect
 set internalip [lindex $argv 0]
-set timeout 10
+set timeout 5
 spawn sudo php artisan p:environment:setup
 expect ">"
 send "example@example.com\r";
 expect ">"
-send "http://$internalip";
+send "http://$internalip\r";
 expect ">"
 send "UTC\r";
 expect ">"
