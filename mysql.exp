@@ -3,16 +3,16 @@ set timeout 5
 spawn sudo mysql -u root -p
 expect "Enter password: "
 send "Defaultpassword1\r";
-expect "*"
+expect "*>"
 send "USE mysql\r";
-expect "*"
+expect "*>"
 send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1'\r";
-expect "*"
+expect "*>"
 send "CREATE DATABASE panel\r";
-expect "*"
+expect "*>"
 send "GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION\r";
-expect "*"
+expect "*>"
 send "FLUSH PRIVILEGES\r";
-expect "*"
+expect "*>"
 send "exit\r";
 interact
