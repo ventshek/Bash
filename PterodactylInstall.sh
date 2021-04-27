@@ -79,5 +79,4 @@ sudo chmod +x user.exp
 sudo ./user.exp
 sudo rm ./user.exp
 cd
-echo "Enough for now"
-exit
+sudo chown -R www-data:www-data *
