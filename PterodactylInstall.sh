@@ -38,7 +38,7 @@ sudo rm ./redis.conf
 sudo chown -R redis:redis /etc/redis/redis.conf
 sudo wget https://github.com/ventshek/Bash/raw/main/cli.exp
 sudo chmod +x cli.exp
-sudo ./cli.exp
+sudo ./cli.exp Defaultpassword1
 sudo rm cli.exp
 sudo mysql -u root -p
 echo "Defaultpassword1";
