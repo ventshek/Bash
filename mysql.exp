@@ -6,13 +6,13 @@ send "Defaultpassword1\r";
 expect "*>"
 send "USE mysql\r";
 expect "*>"
-send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1'\S";
+send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1'\s";
 expect "*>"
-send "CREATE DATABASE panel\S\r";
+send "CREATE DATABASE panel\s";
 expect "*>"
-send "GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION\S";
+send "GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION\s";
 expect "*>"
-send "FLUSH PRIVILEGES\S";
+send "FLUSH PRIVILEGES\s";
 expect "*>"
-send "exit\S";
+send "exit\s";
 interact
