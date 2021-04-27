@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+set timeout 5
+spawn sudo php artisan p:environment:mail
+expect ">"
+send "mail\r";
+expect ">"
+send "example@example.com\r";
+expect ">"
+send "\r";
+expect ">"
+send "tls\r";
