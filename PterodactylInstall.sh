@@ -7,6 +7,7 @@ sudo apt -y install software-properties-common curl apt-transport-https ca-certi
 sudo LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 sudo add-apt-repository -y ppa:chris-lea/redis-server
 sudo apt install -y net-tools
+sudo apt install -y expect
 sudo curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
 sudo apt -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
@@ -25,7 +26,6 @@ sudo wget https://github.com/ventshek/Bash/raw/main/proc.exp
 sudo chmod +x proc.exp
 sudo ./proc.exp "$intip"
 sudo rm ./proc.exp
-cd
 sudo wget https://github.com/ventshek/Bash/raw/main/redis.conf
 sudo cp -f ./redis.conf /etc/redis/redis.conf
 sudo rm ./redis.conf
