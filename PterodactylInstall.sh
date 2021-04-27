@@ -55,14 +55,10 @@ sudo wget https://github.com/ventshek/Bash/raw/main/cli.exp
 sudo chmod +x cli.exp
 sudo ./cli.exp Defaultpassword1
 sudo rm cli.exp
-sudo mysql -u root -p
-echo "Defaultpassword1";
-USE mysql;
-CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1';
-CREATE DATABASE panel;
-GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-exit
+sudo wget https://github.com/ventshek/Bash/raw/main/mysql.exp
+sudo chmod +x mysql.exp
+sudo ./mysql.exp
+sudo rm mysql.exp
 sudo wget https://github.com/ventshek/Bash/raw/main/my.cnf
 sudo cp -f ./my.cnf /etc/mysql/my.cnf
 sudo rm ./my.cnf
@@ -71,13 +67,11 @@ sudo wget https://github.com/ventshek/Bash/raw/main/database.exp
 sudo chmod +x database.exp
 sudo ./database.exp
 sudo rm ./database.exp
-cd
 cd /var/www/pterodactyl
 sudo wget https://github.com/ventshek/Bash/raw/main/mail.exp
 sudo chmod +x mail.exp
 sudo ./mail.exp
 sudo rm ./mail.exp
-cd
 cd /var/www/pterodactyl
 sudo php artisan migrate --seed --force
 sudo wget https://github.com/ventshek/Bash/raw/main/user.exp
