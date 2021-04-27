@@ -10,7 +10,13 @@ sudo apt install -y net-tools
 sudo apt install -y expect
 sudo curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
 sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt-get -y install php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip} mariadb-server nginx tar unzip git redis-server
+sudo apt install -y php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip}
+sudo apt install -y mariadb-server
+sudo apt install -y nginx
+sudo apt install -y tar
+sudo apt install -y unzip 
+sudo apt install -y git 
+sudo apt install -y redis-server
 sudo curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 sudo mkdir -p /var/www/pterodactyl
 cd /var/www/pterodactyl
