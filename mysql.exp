@@ -16,3 +16,5 @@ send "FLUSH PRIVILEGES\s";
 expect "*>"
 send "exit\s";
 interact
+
+
