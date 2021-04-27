@@ -3,15 +3,15 @@ set timeout 5
 spawn sudo mysql -u root -p
 expect "Enter password: "
 send "Defaultpassword1\r";
-expect ">"
-sendraw "USE mysql;\r";
-expect "MariaDB [mysql]> "
-send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1';\r";
-expect "MariaDB [mysql]> "
-send "CREATE DATABASE panel;\r";
-expect "MariaDB [mysql]> "
-send "GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;\r";
-expect "MariaDB [mysql]> "
-send "FLUSH PRIVILEGES;\r";
-expect "MariaDB [mysql]> "
+expect "*"
+sendraw "USE mysql\r";
+expect "*"
+send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1'\r";
+expect "*"
+send "CREATE DATABASE panel\r";
+expect "*"
+send "GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION\r";
+expect "*"
+send "FLUSH PRIVILEGES\r";
+expect "*"
 send "exit\r";
