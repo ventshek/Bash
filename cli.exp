@@ -1,4 +1,5 @@
 #!/usr/bin/expect
+##test
 set pass [lindex $argv 0]
 set timeout 10
 spawn redis-cli
