@@ -2,8 +2,8 @@
 set timeout 10
 spawn sudo redis-cli
 expect "127.0.0.1:6379> "
-send "CONFIG SET requirepass 'Defaultpassword'\r";
+send "CONFIG SET requirepass 'Defaultpassword1'\r";
 expect "127.0.0.1:6379> "
-send "AUTH Defaultpassword\r";
+send "AUTH Defaultpassword1\r";
 expect "127.0.0.1:6379> "
 send "exit\r";
