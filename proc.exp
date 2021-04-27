@@ -1,4 +1,6 @@
 #!/usr/bin/expect
 set timeout 10
 spawn sudo php /var/www/pterodactyl/artisan p:environment:setup
+expect "Egg Author Email [unknown@unknown.com]:"
+send "fuck@off.com/r";
 interact
