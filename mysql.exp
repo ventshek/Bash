@@ -1,0 +1,17 @@
+#!/usr/bin/expect
+set timeout 5
+spawn sudo mysql -u root -p
+expect "Enter password:"
+send "Defaultpassword\r";
+expect "MariaDB [(none)]>"
+send "USE mysql;\r";
+expect "MariaDB [mysql]>"
+send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword';\r";
+expect "MariaDB [mysql]>"
+send "CREATE DATABASE panel;\r";
+expect "MariaDB [mysql]>"
+send "GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;\r";
+expect "MariaDB [mysql]>"
+send "FLUSH PRIVILEGES;\r";
+expect "MariaDB [mysql]>"
+send "exit\r";
