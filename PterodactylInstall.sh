@@ -29,4 +29,22 @@ sudo wget https://github.com/ventshek/Bash/raw/main/redis.conf
 sudo cp -f ./redis.conf /etc/redis/redis.conf
 sudo rm ./redis.conf
 sudo chown -R redis:redis /etc/redis/redis.conf
+sudo wget https://github.com/ventshek/Bash/raw/main/cli.exp
+sudo chmod +x cli.exp
+sudo ./cli.exp
+sudo rm cli.exp
+sudo wget https://github.com/ventshek/Bash/raw/main/mysql.exp
+sudo chmod +x mysql.exp
+sudo ./mysql.exp
+sudo rm mysql.exp
+
+
+
+
+
+
+
+
+
+
 
