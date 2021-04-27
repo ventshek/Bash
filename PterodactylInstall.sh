@@ -78,5 +78,5 @@ sudo wget https://github.com/ventshek/Bash/raw/main/user.exp
 sudo chmod +x user.exp
 sudo ./user.exp
 sudo rm ./user.exp
-cd
 sudo chown -R www-data:www-data *
+cd
