@@ -11,5 +11,7 @@ expect ">"
 send "admin\r";
 expect ">"
 send "user\r";
+expect "*."
+expect "*."
 expect ">"
 send "Defaultpassword1\r";
