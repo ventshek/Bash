@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+set timeout 5
+spawn sudo php artisan p:user:make
+expect ">"
+send "yes\r";
+expect ">"
+send "example@example.com\r";
+expect ">"
+send "Administrator\r";
+expect ">"
+send "admin\r";
+expect ">"
+send "user\r";
+expect ">"
+send "Defaultpassword1\r";
