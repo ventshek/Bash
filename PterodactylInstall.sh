@@ -35,9 +35,9 @@ sudo chmod +x cli.exp
 sudo ./cli.exp
 sudo rm cli.exp
 sudo mysql -u root -p
-echo "Defaultpassword";
+echo "Defaultpassword1";
 USE mysql;
-CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword';
+CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1';
 CREATE DATABASE panel;
 GRANT ALL PRIVILEGES ON panel.* TO 'pterodactyl'@'127.0.0.1' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
