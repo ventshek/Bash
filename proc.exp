@@ -19,7 +19,7 @@ send "yes\r";
 expect ">"
 send "\r";
 expect ">"
-send "Defaultpassword\r";
+send "Defaultpassword1\r";
 expect ">"
 send "\r";
 
