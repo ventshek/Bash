@@ -1,6 +1,6 @@
 #!/usr/bin/expect
 set timeout 5
-sudo php artisan p:environment:database
+spawn sudo php artisan p:environment:database
 expect ">"
 send "\r";
 expect ">"
