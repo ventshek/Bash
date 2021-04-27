@@ -1,4 +1,5 @@
 #!/usr/bin/expect
+intip=$(hostname -I)
 set timeout 10
 spawn sudo php /var/www/pterodactyl/artisan p:environment:setup
 expect ">"
