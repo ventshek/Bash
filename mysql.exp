@@ -4,7 +4,7 @@ spawn sudo mysql -u root -p
 expect "Enter password: "
 send "Defaultpassword1\r";
 expect "*"
-sendraw "USE mysql\r";
+send "USE mysql\r";
 expect "*"
 send "CREATE USER 'pterodactyl'@'127.0.0.1' IDENTIFIED BY 'Defaultpassword1'\r";
 expect "*"
