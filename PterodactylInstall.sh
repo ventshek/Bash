@@ -2,15 +2,30 @@
 #Complete installation
 #Prerequisites
 
-sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
+sudo apt-get update 
+sudo apt-get -y upgrade 
+sudo apt-get -y dist-upgrade
 sudo apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
 sudo LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 sudo add-apt-repository -y ppa:chris-lea/redis-server
 sudo apt install -y net-tools
 sudo apt install -y expect
 sudo curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | sudo bash
-sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
-sudo apt install -y php8.0 php8.0-{cli,gd,mysql,pdo,mbstring,tokenizer,bcmath,xml,fpm,curl,zip}
+sudo apt-get update 
+sudo apt-get -y upgrade 
+sudo apt-get -y dist-upgrade
+sudo apt install -y php8.0 
+sudo apt install -y php8.0-cli
+sudo apt install -y php8.0-gd
+sudo apt install -y php8.0-mysql
+sudo apt install -y php8.0-pdo
+sudo apt install -y php8.0-mbstring
+sudo apt install -y php8.0-tokenizer
+sudo apt install -y php8.0-bcmath
+sudo apt install -y php8.0-xml
+sudo apt install -y php8.0-fpm
+sudo apt install -y php8.0-curl
+sudo apt install -y php8.0-zip
 sudo apt install -y mariadb-server
 sudo apt install -y nginx
 sudo apt install -y tar
